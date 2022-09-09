@@ -1,0 +1,13 @@
+logging:
+  level:
+    org.apache.kafka: WARN
+    org.apache.zookeeper: WARN
+    kafka: WARN
+    state: WARN
+
+spring:
+  kafka:
+    consumer:
+      group-id: test-consumer-group
+    bootstrap-servers:
+      - localhost:9999
