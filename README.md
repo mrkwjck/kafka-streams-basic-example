@@ -24,7 +24,7 @@ based on created shipments aggregated sales data for each product is created.
 ### <a name="architecture"></a>Architecture and flow
 
 There are 2 simple layers in this example:
-* `REST API` layer used to create and order and to query aggregated sales data
+* `REST API` layer used to create an order and to query aggregated sales data
 * `KAFKA` layer used to accept orders, process them, store and expose aggregated 
 sales data
 
@@ -55,7 +55,7 @@ Flow of the application is as follows:
   }
 }
 ```
-2. `order` and `product` are joined by `order.id = product.id` and `shipment` is
+2. `order` and `product` are joined by `order.item.id = product.id` and `shipment` is
 published to `SHIPMENTS` topic;<br>
 **example `shipment`**:
 ```json
